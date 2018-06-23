@@ -1,0 +1,88 @@
+body {
+  color: black;
+}
+
+
+.main {
+  background-color: #00004a;
+  color: whitesmoke;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: black;
+  height: 5vh;
+  border: 1px solid green;
+  display: inline-block;
+}
+
+.slider {
+  height: 45vh;
+  border: 1px solid green;
+}
+
+.offer {
+  height: 20vh;
+  border: 1px solid green;
+}
+
+.pricelist {
+  height: 25vh;
+  border: 1px solid green;
+}
+
+
+.footer {
+  height: 5vh;
+  border: 1px solid green;
+  background-color: darkblue;
+}
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+
+$cols : 12;
+
+.grid-container {
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  display: grid;
+
+  .row::before, .row::after {
+    content : "";
+    display : table;
+    clear: both;
+  }
+
+  [class*='col-'] {
+    float: none;
+    width: 100%;
+    min-height: 1px;
+    padding: 12px;
+
+    @media (min-width: 550px) {
+      float: left;
+    }
+  }
+
+  @for $i from 1 through $cols {
+    .col-#{$i} {
+      @media (min-width: 550px) {
+        width: 100% / $cols * $i;
+      }
+    }
+  }
+}

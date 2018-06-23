@@ -1,0 +1,11 @@
+.welcomebutton {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  //background-image: url("images/4.jpg") no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%,-50%);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
