@@ -1,231 +1,62 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
+/*
+Error: It's not clear which file to import for '@import "partials/mainPage"'.
+       Candidates:
+         partials/_mainPage.scss
+         partials/mainPage.scss
+       Please delete or rename all but one of these files.
+        on line 3 of main.scss
 
-@keyframes roll-in-left {
-  0% {
-    transform: translateX(-800px) rotate(-540deg);
-    opacity: 0; }
-  100% {
-    transform: translateX(0) rotate(0deg);
-    opacity: 1; } }
-aside {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  flex-grow: 1;
-  background: whitesmoke;
-  color: black; }
+1: @import 'modules/all';
+2: @import 'partials/reset';
+3: @import 'partials/mainPage';
+4: @import 'partials/base';
+5: @import 'partials/nav';
+6: @import 'partials/mainPage';
+7: @import 'partials/gallery';
+8: @import 'partials/welcome';
 
-.slider-image {
-  float: left; }
-
-.slider-text {
-  justify-content: center;
-  height: 45vh;
-  width: 35vw;
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center; }
-
-.slider-text h1 {
-  padding-top: 10vh;
-  width: 100%;
-  height: 5vh; }
-
-.slider-text a {
-  width: 100%; }
-
-button {
-  width: 10vw;
-  height: 5vh; }
-
-img {
-  animation: roll-in-left 0.8s ease-out both; }
-
-body {
-  color: black; }
-
-.main {
-  background-color: #00004a;
-  color: whitesmoke;
-  font-size: 12px;
-  font-family: Arial, sans-serif; }
-
-header {
-  background-color: black;
-  height: 5vh;
-  border: 1px solid green;
-  display: inline-block; }
-
-.slider {
-  height: 45vh;
-  border: 1px solid green; }
-
-.offer {
-  height: 20vh;
-  border: 1px solid green; }
-
-.pricelist {
-  height: 25vh;
-  border: 1px solid green; }
-
-.footer {
-  height: 5vh;
-  border: 1px solid green;
-  background-color: darkblue; }
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center; }
-
-.container {
-  width: 80vw;
-  margin: 0 auto; }
-
-.grid-container {
-  width: 100%;
-  max-width: 2000px;
-  margin: 0 auto;
-  display: grid; }
-  .grid-container .row::before, .grid-container .row::after {
-    content: "";
-    display: table;
-    clear: both; }
-  .grid-container [class*='col-'] {
-    float: none;
-    width: 100%;
-    min-height: 1px;
-    padding: 12px; }
-    @media (min-width: 550px) {
-      .grid-container [class*='col-'] {
-        float: left; } }
-  @media (min-width: 550px) {
-    .grid-container .col-1 {
-      width: 8.3333333333%; } }
-  @media (min-width: 550px) {
-    .grid-container .col-2 {
-      width: 16.6666666667%; } }
-  @media (min-width: 550px) {
-    .grid-container .col-3 {
-      width: 25%; } }
-  @media (min-width: 550px) {
-    .grid-container .col-4 {
-      width: 33.3333333333%; } }
-  @media (min-width: 550px) {
-    .grid-container .col-5 {
-      width: 41.6666666667%; } }
-  @media (min-width: 550px) {
-    .grid-container .col-6 {
-      width: 50%; } }
-  @media (min-width: 550px) {
-    .grid-container .col-7 {
-      width: 58.3333333333%; } }
-  @media (min-width: 550px) {
-    .grid-container .col-8 {
-      width: 66.6666666667%; } }
-  @media (min-width: 550px) {
-    .grid-container .col-9 {
-      width: 75%; } }
-  @media (min-width: 550px) {
-    .grid-container .col-10 {
-      width: 83.3333333333%; } }
-  @media (min-width: 550px) {
-    .grid-container .col-11 {
-      width: 91.6666666667%; } }
-  @media (min-width: 550px) {
-    .grid-container .col-12 {
-      width: 100%; } }
-
-nav {
-  float: right; }
-
-ol {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  background-color: black;
-  font-size: 12px;
-  height: 35px;
-  line-height: 40px;
-  text-align: center; }
-
-ol a {
-  display: block;
-  text-decoration: none;
-  color: whitesmoke; }
-
-ol > li {
-  float: left;
-  width: 133px;
-  background-color: black;
-  height: 28px;
-  margin-left: -3px; }
-
-ol > li:first-child {
-  margin: 0 auto; }
-
-ol > li:hover {
-  background-color: black; }
-
-ol > li:hover > a {
-  color: #5de3d2; }
-
-ol > li:hover > ul {
-  display: block; }
-
-ol > li > ul {
-  display: none;
-  list-style-type: none;
-  padding: 5px 0 0 0;
-  margin: 0 auto; }
-
-ol > li > ul > li {
-  position: relative;
-  background-color: black; }
-
-ol > li > ul > li > a {
-  border-top: 1px solid black; }
-
-ol > li > ul > li:hover {
-  background-color: #5de3d2; }
-
-ol > li > ul > li:hover > a {
-  color: black; }
-
-ol > li > ul > li:first-child a {
-  margin-top: 17px; }
-
-ol > li > ul > li:first-child a:after {
-  content: '';
-  position: absolute;
-  left: 52px;
-  top: -12px;
-  width: 0;
-  height: 0;
-  border-left: 13px solid transparent;
-  border-right: 13px solid transparent;
-  border-bottom: 12px solid black; }
-
-.gallery {
-  background: whitesmoke;
-  color: black; }
-
-.picture {
-  width: 100px;
-  height: 100px; }
-
-.welcomebutton {
-  height: 100px;
-  width: 100px;
-  border-radius: 50px;
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); }
-
-/*# sourceMappingURL=main.css.map */
+Backtrace:
+main.scss:3
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/import_node.rb:45:in `import'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:135:in `with_frame'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin.rb:82:in `update_stylesheets'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/base.rb:52:in `parse'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/base.rb:19:in `parse!'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/bin/scss:13:in `<top (required)>'
+/usr/local/bin/scss:22:in `load'
+/usr/local/bin/scss:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: It's not clear which file to import for '@import \"partials/mainPage\"'.\A        Candidates:\A          partials/_mainPage.scss\A          partials/mainPage.scss\A        Please delete or rename all but one of these files.\A         on line 3 of main.scss\A \A 1: @import 'modules/all';\A 2: @import 'partials/reset';\A 3: @import 'partials/mainPage';\A 4: @import 'partials/base';\A 5: @import 'partials/nav';\A 6: @import 'partials/mainPage';\A 7: @import 'partials/gallery';\A 8: @import 'partials/welcome';"; }

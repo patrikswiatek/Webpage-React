@@ -1,127 +1,99 @@
 import React from 'react';
 import GallerySearch from './gallerySearch.jsx';
-import Chairs2 from './chairs.js';
-import ReactDOM from 'react-dom';
+import Gallery from 'react-grid-gallery';
+import './../partials/_gallery.scss'
 import Fetch from './fetch.jsx'
 
-class ChairItem extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			text: '',
-		}
-	}
-		render(){
-			return (<ul>
-					<li>{this.props.name}</li>
-					<li>{this.props.color}</li>
-					<li>{this.props.price}</li>
-					<li><img className='picture' src={this.props.src}/></li>
-				</ul>)
-		}
-	}
+
+class Products extends React.Component {
+
+	render() {
+
+		const images = [{
+			src: "./../images/1.jpg",
+			thumbnail: "./../images/1.jpg",
+			thumbnailWidth: 320,
+			thumbnailHeight: 174,
+			caption: "After Rain (Jeshu John - designerspics.com)"
+		},
+		{
+			src: "./../images/2.jpg",
+			thumbnail: "./../images/2.jpg",
+			thumbnailWidth: 320,
+			thumbnailHeight: 212,
+			tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
+			caption: "Boats (Jeshu John - designerspics.com)"
+		},
+		{
+			src: "./../images/3.jpg",
+			thumbnail: "./../images/3.jpg",
+			thumbnailWidth: 320,
+			thumbnailHeight: 212
+		},
+		{
+			src: "./../images/4.jpg",
+			thumbnail: "./../images/4.jpg",
+			thumbnailWidth: 320,
+			thumbnailHeight: 212
+		},
+		{
+			src: "./../images/5.jpg",
+			thumbnail: "./../images/5.jpg",
+			thumbnailWidth: 320,
+			thumbnailHeight: 212
+		},
+		{
+			src: "./../images/6.jpg",
+			thumbnail: "./../images/6.jpg",
+			thumbnailWidth: 320,
+			thumbnailHeight: 212
+		},
+		{
+			src: "./../images/7.jpg",
+			thumbnail: "./../images/7.jpg",
+			thumbnailWidth: 320,
+			thumbnailHeight: 212
+		},
+		{
+			src: "./../images/8.jpg",
+			thumbnail: "./../images/8.jpg",
+			thumbnailWidth: 320,
+			thumbnailHeight: 212
+		},
+		{
+			src: "./../images/9.jpg",
+			thumbnail: "./../images/9.jpg",
+			thumbnailWidth: 320,
+			thumbnailHeight: 212
+		},
+		{
+			src: "./../images/10.jpg",
+			thumbnail: "./../images/10.jpg",
+			thumbnailWidth: 320,
+			thumbnailHeight: 212
+		},
+		{
+			src: "./../images/11.jpg",
+			thumbnail: "./../images/11.jpg",
+			thumbnailWidth: 320,
+			thumbnailHeight: 212
+		},
 
 
-class ChairItems extends React.Component{
-	render(){
-		const list = this.props.list.map( (chair, index) => {
+		];
+
 		return (
-			<ChairItem name={chair.name} colore={chair.color} price={chair.price} src={chair.src} key={index} />)
-		});
+			<div className="gallery">
+				<div className="container">
+					<h1>Galeria mega jest</h1>
+					<Gallery className ="galleryPictures" images={images}/>
+				</div>
+			</div>
 
-		return(
-			<ul>
-				{list}
-			</ul>)
-
-	}
-}
-/*
-class Chairs extends React.Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			list: this.props.list,
-		}
-	}
-
-	addProduct = chair => {
-		const newList = this.state.list.slice();
-		newList.push(chair);
-
-		this.setState({
-			list: newList,
-		})
-	};
-	render() {
-
-
-		return (
-			<ul>
-				<ChairItems onBuy={ this.addProduct } />
-			</ul>
-		)
+		);
 	}
 }
 
-class Test extends React.Component {
-	render() {
-		return <Shop />
-	}
-}
-*/
-
-class PreGallery extends React.Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			text: '',
-		}
-	}
-
-	handleTextChange = event => {
-		this.setState({
-			text: event.target.value,
-		});
-	};
-
-	handleCheckboxChange = event => {
-		this.setState({
-			set: event.target.checked,
-		});
-	};
-
-	render () {
-		const list = this.state.list.filter(chair => {
-			if(this.state.set && !chair.set) {
-				return false;
-			}
-			if(this.state.text.length > 0 && chair.name.indexOf(this.state.text) === -1) {
-				return false;
-			}
-			return true;
-		});
-		return (<section>
-			<GallerySearch onTextChange={this.handleTextChange} onCheckboxChange={this.handleCheckboxChange} text={this.state.text} set={this.state.set} />
-		</section>)
-	}
-}
-
-
-
-class Gallery extends React.Component {
-	render() {
-
-		return(
-			<div>
-		 <ChairItems list={Chairs2}/>
-		 <Fetch />
-			</div>)
-	}
-}
-
-export default Gallery;
+export default Products;
 
 

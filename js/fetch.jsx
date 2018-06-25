@@ -1,40 +1,80 @@
-import React from 'react';
+import React from "react";
+import './../partials/_gallery.scss'
 
 
 class Fetch extends React.Component {
 	constructor(props) {
 		super(props);
-
 		this.state = {
-			value: null,
+			database: [],
 		}
 	}
 
-	render() {
-
-		if (this.state.value === null) {
-			return null;
-		}
-
-		return (<div>
-				<h1>{this.state.value}</h1>
-			</div>)
-	}
-
-	componentDidMount() {
-		fetch('./../db')
-			.then(resp => {
-				if (resp.ok) {
-					return resp.json();
-				} else {
-					throw new Error('Błąd sieci!');
-				}
-			})
+	clickDelete = event => {
+		fetch(`http://localhost:3000/products/${event.target.parentElement.getAttribute('id')}`, {
+			method: 'DELETE',
+		}).then(resp => resp.json())
 			.then(data => {
-				console.log(data);
+				this.loadProducts();
+			});
+	};
 
-			}).catch(err => console.log(err));
+	clickAdd = event => {
+		fetch('http://localhost:3000/products', {
+			method: 'POST', body: JSON.stringify(myData)
+		}).then(resp => resp.json())
+			.then(data => {
+				this.loadProducts();
+			});
+	};
+
+	loadProducts = () => {
+		fetch('http://localhost:3000/products')
+			.then(r => r.json())
+			.then(data => {
+				this.setState({
+					database: data,
+				});
+				console.log(data);
+			});
+	};
+
+	render(){
+		return (
+			<div>
+				<ul>
+					{this.state.database.map((el) => <li key={el.id} id={el.id}> {el.src} {el.name} {el.price} </li>)}
+				</ul>
+			</div>
+		);
+	}
+	componentDidMount(){
+		this.loadProducts()
 	}
 }
+/*
+class Prod extends React.Component {
+	render() {
+		return (
+			{
+				src: this.props.src,
+				thumbnail: this.props.price,
+				thumbnailWidth: 320,
+				thumbnailHeight: 174,
+				caption: this.props.name,
+			});
+	}
+}
+*/
 
 export default Fetch;
+
+/*
+const images = [{
+			src: "./../images/1.jpg",
+			thumbnail: "./../images/1.jpg",
+			thumbnailWidth: 320,
+			thumbnailHeight: 174,
+			caption: "After Rain (Jeshu John - designerspics.com)"
+		},
+ */

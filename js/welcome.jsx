@@ -1,36 +1,55 @@
 import React from 'react';
-import './../partials/welcomePage.scss'
+import '../partials/_welcome.scss';
+import scrollToComponent from 'react-scroll-to-component';
+import './main.jsx';
+import Menu from './nav.jsx';
+
 
 class Welcome extends React.Component {
 	constructor (props) {
 		super(props);
 
 		this.state = {
-			videoURL: '../videos/videochair.mp4'
+			videoURL: './../videos/video3.mp4',
+			filter: 'none',
 		}
 	}
 
+	handleEnter = () => {
+		this.setState({
+			filter: 'blur(3px)',
+		})
+	};
+
+	handleLeave = () => {
+			this.setState({
+				filter: 'none',
+			})
+		};
 
 
 	render () {
+
+	const style = {
+		filter: this.state.filter
+	};
+
 		return (
-			<div className='welcome'>
-					<button  className='welcomebutton' onClick={this.handleClick}></button>
-				<video height={'780px'} width={'1420px'} id="background-video" loop autoPlay>
+			<div>
+				<a className="fancy-btn" onMouseEnter={ this.handleEnter } onMouseLeave={this.handleLeave} onClick={() => scrollToComponent(this.Finish, { offset: 0, align: 'top', duration: 1500})} >
+					You'll sit down with the impression
+				</a>
+				<video style={style} id="background-video" loop autoPlay>
 					<source src={this.state.videoURL} type="video/mp4" />
+					Your browser does not support the video tag.
 				</video>
+				<header className="col-12 row menu" ref={(header) => { this.Finish = header; }} />
+
 			</div>
-
-		)
+		);
 	}
-
-	handleClick() {
-			$('.welcome').animate({
-					scrollTop: $(".menu").offset().top},
-				'slow');
-	}
-
-
 }
 
 export default Welcome;
+
+
