@@ -1,6 +1,6 @@
 import React from 'react';
-import Parallax from 'react-springy-parallax'
-import * as ScrollMagic from 'scrollmagic'
+import Menu from './nav.jsx'
+import Footer from './footer.jsx'
 
 
 class MainPage extends React.Component {
@@ -11,15 +11,15 @@ class MainPage extends React.Component {
 		return (
 			<div>
 
+						<section className="section1">
+							<Menu />
+							<Footer />
+						</section>
+						<section className="section2" />
 
-						<section className="panel section1" />
 
+						<section className="section3" />
 
-						<section className="panel section2" />
-
-
-						<section className="panel section3" />
-				
 			</div>
 				);
 	}

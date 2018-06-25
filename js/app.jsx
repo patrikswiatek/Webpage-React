@@ -5,6 +5,7 @@ import Main from './main.jsx'
 import GalleryMain from './galleryMain.jsx'
 import {HashRouter} from "react-router-dom";
 import Route from "react-router-dom/es/Route";
+import Contact from './contact.jsx'
 
 
 
@@ -15,7 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
 				return (<HashRouter>
 					<div>
 						<Route exact path='/' component={Main}/>
-						<Route path='/Gallery' component={GalleryMain}/>
+						<Route path='/Shop' component={GalleryMain}/>
+						<Route path='/Contact' component={Contact}/>
 					</div>
 				</HashRouter>)
 			}

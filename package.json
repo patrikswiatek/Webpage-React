@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@blueprintjs/core": "^2.3.1",
     "react": "^15.6.2",
     "react-coverflow": "^0.2.14",
     "react-dom": "^15.6.2",

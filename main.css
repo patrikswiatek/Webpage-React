@@ -1,62 +1,305 @@
-/*
-Error: It's not clear which file to import for '@import "partials/mainPage"'.
-       Candidates:
-         partials/_mainPage.scss
-         partials/mainPage.scss
-       Please delete or rename all but one of these files.
-        on line 3 of main.scss
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-1: @import 'modules/all';
-2: @import 'partials/reset';
-3: @import 'partials/mainPage';
-4: @import 'partials/base';
-5: @import 'partials/nav';
-6: @import 'partials/mainPage';
-7: @import 'partials/gallery';
-8: @import 'partials/welcome';
+/* BODY */
+.section1 {
+  background: url("./images/16.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 99vw;
+  position: absolute;
+  z-index: 1; }
 
-Backtrace:
-main.scss:3
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/import_node.rb:45:in `import'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:161:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin.rb:82:in `update_stylesheets'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/bin/scss:13:in `<top (required)>'
-/usr/local/bin/scss:22:in `load'
-/usr/local/bin/scss:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: It's not clear which file to import for '@import \"partials/mainPage\"'.\A        Candidates:\A          partials/_mainPage.scss\A          partials/mainPage.scss\A        Please delete or rename all but one of these files.\A         on line 3 of main.scss\A \A 1: @import 'modules/all';\A 2: @import 'partials/reset';\A 3: @import 'partials/mainPage';\A 4: @import 'partials/base';\A 5: @import 'partials/nav';\A 6: @import 'partials/mainPage';\A 7: @import 'partials/gallery';\A 8: @import 'partials/welcome';"; }
+.section1:active {
+  filter: blur(1.5px); }
+
+.section2 {
+  height: 100vh;
+  width: 100vw;
+  background: url("./images/3.jpg") no-repeat;
+  background-size: cover; }
+
+.section3 {
+  height: 100vh;
+  width: 100vw;
+  background: url("./images/4.jpg") no-repeat;
+  background-size: cover; }
+
+/* MENU */
+nav {
+  float: right;
+  filter: none;
+  padding-top: 30px; }
+
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  height: 35px;
+  line-height: 40px;
+  text-align: center; }
+
+ol a {
+  display: block;
+  text-decoration: none;
+  color: whitesmoke;
+  font-family: SansSerif, sans-serif; }
+
+ol > li {
+  float: left;
+  width: 133px;
+  height: 28px; }
+
+ol > li:hover > a {
+  color: rgba(121, 55, 6, 0.82); }
+
+/* FOOTER */
+.footer {
+  position: absolute;
+  bottom: 50px;
+  right: 120px; }
+
+.text {
+  float: right;
+  color: whitesmoke;
+  font-size: 19px;
+  font-style: italic;
+  text-decoration: none; }
+
+.text:hover {
+  color: rgba(121, 55, 6, 0.82); }
+
+body {
+  color: black; }
+
+.main {
+  background-color: #00004a;
+  color: whitesmoke;
+  font-size: 12px;
+  font-family: Arial, sans-serif; }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center; }
+
+.container {
+  width: 80vw;
+  margin: 0 auto; }
+
+.grid-container {
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  display: grid; }
+  .grid-container .row::before, .grid-container .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .grid-container [class*='col-'] {
+    float: none;
+    width: 100%;
+    min-height: 1px;
+    padding: 12px; }
+    @media (min-width: 550px) {
+      .grid-container [class*='col-'] {
+        float: left; } }
+  @media (min-width: 550px) {
+    .grid-container .col-1 {
+      width: 8.3333333333%; } }
+  @media (min-width: 550px) {
+    .grid-container .col-2 {
+      width: 16.6666666667%; } }
+  @media (min-width: 550px) {
+    .grid-container .col-3 {
+      width: 25%; } }
+  @media (min-width: 550px) {
+    .grid-container .col-4 {
+      width: 33.3333333333%; } }
+  @media (min-width: 550px) {
+    .grid-container .col-5 {
+      width: 41.6666666667%; } }
+  @media (min-width: 550px) {
+    .grid-container .col-6 {
+      width: 50%; } }
+  @media (min-width: 550px) {
+    .grid-container .col-7 {
+      width: 58.3333333333%; } }
+  @media (min-width: 550px) {
+    .grid-container .col-8 {
+      width: 66.6666666667%; } }
+  @media (min-width: 550px) {
+    .grid-container .col-9 {
+      width: 75%; } }
+  @media (min-width: 550px) {
+    .grid-container .col-10 {
+      width: 83.3333333333%; } }
+  @media (min-width: 550px) {
+    .grid-container .col-11 {
+      width: 91.6666666667%; } }
+  @media (min-width: 550px) {
+    .grid-container .col-12 {
+      width: 100%; } }
+
+/* BODY */
+.section1 {
+  background: url("./images/16.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 99vw;
+  position: absolute;
+  z-index: 1; }
+
+.section1:active {
+  filter: blur(1.5px); }
+
+.section2 {
+  height: 100vh;
+  width: 100vw;
+  background: url("./images/3.jpg") no-repeat;
+  background-size: cover; }
+
+.section3 {
+  height: 100vh;
+  width: 100vw;
+  background: url("./images/4.jpg") no-repeat;
+  background-size: cover; }
+
+/* MENU */
+nav {
+  float: right;
+  filter: none;
+  padding-top: 30px; }
+
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  height: 35px;
+  line-height: 40px;
+  text-align: center; }
+
+ol a {
+  display: block;
+  text-decoration: none;
+  color: whitesmoke;
+  font-family: SansSerif, sans-serif; }
+
+ol > li {
+  float: left;
+  width: 133px;
+  height: 28px; }
+
+ol > li:hover > a {
+  color: rgba(121, 55, 6, 0.82); }
+
+/* FOOTER */
+.footer {
+  position: absolute;
+  bottom: 50px;
+  right: 120px; }
+
+.text {
+  float: right;
+  color: whitesmoke;
+  font-size: 19px;
+  font-style: italic;
+  text-decoration: none; }
+
+.text:hover {
+  color: rgba(121, 55, 6, 0.82); }
+
+.gallery {
+  color: navy;
+  position: absolute;
+  background: rgba(14, 30, 132, 0.93);
+  background-size: contain;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw; }
+
+.galleryPictures {
+  position: relative;
+  z-index: 0; }
+
+.picture {
+  width: 100px;
+  height: 100px; }
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  padding: 50px; }
+
+#background-video {
+  width: 99vw;
+  height: 100vh;
+  background-color: black; }
+
+.fancy-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #ff710a;
+  color: #ff710a;
+  font-family: 'Dancing Script',serif;
+  font-style: italic;
+  font-size: 30px;
+  text-decoration: none;
+  margin: 20px auto;
+  transition: color 0.4s;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%); }
+
+.fancy-btn:after {
+  content: " ";
+  border: 2px solid rgba(0, 0, 0, 0);
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transition: all 0.4s; }
+
+.fancy-btn:hover {
+  color: #eee; }
+
+.fancy-btn:hover:after {
+  border: 2px solid #fda;
+  width: calc(100% - 10px);
+  height: calc(100% + 10px); }
+
+#btn-twtr {
+  clear: both;
+  color: #fff;
+  border: 2px solid;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-family: sans-serif;
+  font-size: 14px;
+  width: 13em;
+  padding: 5px 10px;
+  font-weight: 600;
+  margin: 90px auto;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0px 3px rgba(0, 0, 0, 0.2);
+  opacity: 0.6; }
+
+#btn-twtr:hover {
+  color: #fff;
+  opacity: 1; }
+
+/*# sourceMappingURL=main.css.map */

@@ -2,7 +2,6 @@ import React from 'react';
 import '../partials/_welcome.scss';
 import scrollToComponent from 'react-scroll-to-component';
 import './main.jsx';
-import Menu from './nav.jsx';
 
 
 class Welcome extends React.Component {
@@ -37,7 +36,7 @@ class Welcome extends React.Component {
 		return (
 			<div>
 				<a className="fancy-btn" onMouseEnter={ this.handleEnter } onMouseLeave={this.handleLeave} onClick={() => scrollToComponent(this.Finish, { offset: 0, align: 'top', duration: 1500})} >
-					You'll sit down with the impression
+					You'll sit with the excitement
 				</a>
 				<video style={style} id="background-video" loop autoPlay>
 					<source src={this.state.videoURL} type="video/mp4" />

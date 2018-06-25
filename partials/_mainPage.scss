@@ -1,16 +1,22 @@
-.section1 {
-  height: 100vh;
-  width: 100vw;
-  background: url("./images/16.jpeg") no-repeat;
-  background-size: cover;
-  filter: blur(1.5px);
+/* BODY */
 
+.section1 {
+  background: url("./images/16.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 99vw;
+  position: absolute;
+  z-index: 1;
 }
+.section1:active {
+  filter: blur(1.5px);
+}
+
 
 .section2 {
   height: 100vh;
   width: 100vw;
-  background: url("./images/1.jpg") no-repeat;
+  background: url("./images/3.jpg") no-repeat;
   background-size: cover;
 
 }
@@ -20,5 +26,60 @@
   width: 100vw;
   background: url("./images/4.jpg") no-repeat;
   background-size: cover;
+}
 
+/* MENU */
+
+nav {
+  float: right;
+  filter: none;
+  padding-top: 30px;
+}
+
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  height: 35px;
+  line-height: 40px;
+  text-align: center;
+}
+
+ol a {
+  display: block;
+  text-decoration: none;
+  color: whitesmoke;
+  font-family: SansSerif, sans-serif;
+}
+
+ol>li {
+  float: left;
+  width: 133px;
+  height: 28px;
+}
+
+
+ol>li:hover>a {
+  color: rgba(121, 55, 6, 0.82);
+}
+
+/* FOOTER */
+
+.footer {
+  position: absolute;
+  bottom: 50px;
+  right: 120px;
+}
+
+.text {
+  float: right;
+  color: whitesmoke;
+  font-size: 19px;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.text:hover {
+  color: rgba(121, 55, 6, 0.82);
 }
