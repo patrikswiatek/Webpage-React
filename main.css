@@ -1,76 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Philosopher:400,400i");
+@import url("https://fonts.googleapis.com/css?family=Philosopher:400,400i");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
-
-/* BODY */
-.section1 {
-  background: url("./images/16.jpg") no-repeat;
-  background-size: cover;
-  height: 100vh;
-  width: 99vw;
-  position: absolute;
-  z-index: 1; }
-
-.section1:active {
-  filter: blur(1.5px); }
-
-.section2 {
-  height: 100vh;
-  width: 100vw;
-  background: url("./images/3.jpg") no-repeat;
-  background-size: cover; }
-
-.section3 {
-  height: 100vh;
-  width: 100vw;
-  background: url("./images/4.jpg") no-repeat;
-  background-size: cover; }
-
-/* MENU */
-nav {
-  float: right;
-  filter: none;
-  padding-top: 30px; }
-
-ol {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  font-size: 16px;
-  height: 35px;
-  line-height: 40px;
-  text-align: center; }
-
-ol a {
-  display: block;
-  text-decoration: none;
-  color: whitesmoke;
-  font-family: SansSerif, sans-serif; }
-
-ol > li {
-  float: left;
-  width: 133px;
-  height: 28px; }
-
-ol > li:hover > a {
-  color: rgba(121, 55, 6, 0.82); }
-
-/* FOOTER */
-.footer {
-  position: absolute;
-  bottom: 50px;
-  right: 120px; }
-
-.text {
-  float: right;
-  color: whitesmoke;
-  font-size: 19px;
-  font-style: italic;
-  text-decoration: none; }
-
-.text:hover {
-  color: rgba(121, 55, 6, 0.82); }
 
 body {
   color: black; }
@@ -152,7 +85,8 @@ body {
   height: 100vh;
   width: 99vw;
   position: absolute;
-  z-index: 1; }
+  z-index: 1;
+  font-family: 'Philosopher', sans-serif; }
 
 .section1:active {
   filter: blur(1.5px); }
@@ -161,19 +95,23 @@ body {
   height: 100vh;
   width: 100vw;
   background: url("./images/3.jpg") no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  position: absolute;
+  z-index: 1; }
 
 .section3 {
   height: 100vh;
   width: 100vw;
   background: url("./images/4.jpg") no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  position: absolute;
+  z-index: 1; }
 
 /* MENU */
 nav {
   float: right;
   filter: none;
-  padding-top: 30px; }
+  padding-top: 45px; }
 
 ol {
   list-style-type: none;
@@ -187,8 +125,7 @@ ol {
 ol a {
   display: block;
   text-decoration: none;
-  color: whitesmoke;
-  font-family: SansSerif, sans-serif; }
+  color: whitesmoke; }
 
 ol > li {
   float: left;
@@ -201,8 +138,8 @@ ol > li:hover > a {
 /* FOOTER */
 .footer {
   position: absolute;
-  bottom: 50px;
-  right: 120px; }
+  bottom: 60px;
+  right: 130px; }
 
 .text {
   float: right;
@@ -301,5 +238,197 @@ h1 {
 #btn-twtr:hover {
   color: #fff;
   opacity: 1; }
+
+.arrowed {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  margin: 0 20px 20px 0; }
+
+.arrow-1 {
+  height: 35px;
+  width: 35px;
+  border: 1px solid #f5a061;
+  border-width: 4px 4px 0 0;
+  transform: rotate(225deg);
+  position: absolute;
+  left: 2.4vw;
+  top: 2vw;
+  z-index: 3; }
+
+.flexwrap {
+  border: 3px solid #f5a061;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  position: absolute;
+  left: 25vw;
+  top: 3vh;
+  z-index: 2;
+  background-color: #663006;
+  opacity: 1; }
+
+.contact {
+  font: 100% 'Roboto', arial, sans-serif;
+  background: url("./images/17.jpg") no-repeat;
+  background-size: cover;
+  color: #f5a061;
+  text-decoration: none;
+  width: 100vw;
+  height: 100vh; }
+
+form {
+  opacity: 0.9;
+  padding: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 40.625rem;
+  background-color: #663006;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(168, 255, 165, 0.07);
+  position: relative;
+  top: 7vh; }
+
+.react-form h1 {
+  font-size: 1.40rem;
+  color: #f5a061; }
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0.1rem;
+  text-align: center;
+  font-size: 1.618rem; }
+
+.form-group {
+  padding: 0;
+  border: 0; }
+  .form-group + .form-group {
+    margin-top: 1rem; }
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+  font-size: .75rem;
+  text-transform: uppercase;
+  touch-action: manipulation; }
+
+input,
+textarea {
+  display: block;
+  padding: .5rem .75rem;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: black;
+  background: #f5a061 none;
+  background-clip: padding-box;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #000000;
+  border-left: 0;
+  border-radius: 25px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 1, 1); }
+  input:focus,
+  textarea:focus {
+    outline: 0;
+    border-bottom-color: #ab3f23; }
+
+textarea {
+  resize: vertical; }
+
+.btn {
+  display: inline-block;
+  padding: .75rem 1rem;
+  margin-top: 1.618rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #ab3f23;
+  border: 1px solid transparent;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 1, 1); }
+  .btn:focus, .btn:hover {
+    background-color: #d75a3a;
+    box-shadow: 0 18px 35px rgba(50, 50, 93, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07); }
+  .btn:focus {
+    outline: 0; }
+
+/* BODY */
+.section1 {
+  background: url("./images/16.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 99vw;
+  position: absolute;
+  z-index: 1;
+  font-family: 'Philosopher', sans-serif; }
+
+.section1:active {
+  filter: blur(1.5px); }
+
+.section2 {
+  height: 100vh;
+  width: 100vw;
+  background: url("./images/3.jpg") no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 1; }
+
+.section3 {
+  height: 100vh;
+  width: 100vw;
+  background: url("./images/4.jpg") no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 1; }
+
+/* MENU */
+nav {
+  float: right;
+  filter: none;
+  padding-top: 45px; }
+
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  height: 35px;
+  line-height: 40px;
+  text-align: center; }
+
+ol a {
+  display: block;
+  text-decoration: none;
+  color: whitesmoke; }
+
+ol > li {
+  float: left;
+  width: 133px;
+  height: 28px; }
+
+ol > li:hover > a {
+  color: rgba(121, 55, 6, 0.82); }
+
+/* FOOTER */
+.footer {
+  position: absolute;
+  bottom: 60px;
+  right: 130px; }
+
+.text {
+  float: right;
+  color: whitesmoke;
+  font-size: 19px;
+  font-style: italic;
+  text-decoration: none; }
+
+.text:hover {
+  color: rgba(121, 55, 6, 0.82); }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,7 +1,6 @@
 import React from 'react';
-import '../partials/_welcome.scss';
 import scrollToComponent from 'react-scroll-to-component';
-import './main.jsx';
+
 
 
 class Welcome extends React.Component {

@@ -1,16 +1,12 @@
 import React from 'react';
-
-
-
+import Link from "react-router-dom/es/Link";
 
 class Footer extends React.Component {
 
 	render () {
 		return (
 			<div className="footer">
-
-					<a href="" className="text">Let's talk about your comfort</a>
-
+					<span><Link className="text" to='/Contact'>Let's talk about your comfort</Link></span>
 			</div>
 		)
 	}
