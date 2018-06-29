@@ -1,11 +1,10 @@
 import React from 'react';
-import GallerySearch from './gallerySearch.jsx';
-import Gallery from 'react-grid-gallery';
-import './../partials/_gallery.scss'
-import Fetch from './fetch.jsx'
+import Lightbox from 'react-native-lightbox';
 
 
-class Products extends React.Component {
+
+class Gallery extends React.Component {
+
 
 	render() {
 
@@ -78,22 +77,27 @@ class Products extends React.Component {
 			thumbnailWidth: 320,
 			thumbnailHeight: 212
 		},
-
-
 		];
 
+
+
+
 		return (
-			<div className="gallery">
-				<div className="container">
-					<h1>Galeria mega jest</h1>
-					<Gallery className ="galleryPictures" images={images}/>
-				</div>
+			<div>
+		const LightboxView ({ navigator }) => (
+					<Lightbox navigator={navigator}>
+						<Image
+							style={{ height: 300 }}
+							source={{ uri: 'http://knittingisawesome.com/wp-content/uploads/2012/12/cat-wearing-a-reindeer-hat1.jpg' }}
+						/>
+					</Lightbox>
 			</div>
+
 
 		);
 	}
 }
 
-export default Products;
+export default Gallery;
 
 

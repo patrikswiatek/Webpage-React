@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	class NotFound extends React.Component {
 		render() {
-			return <h1>404,Nothing is here</h1>;
+			return <h1>404</h1>;
 		}
 	}
 

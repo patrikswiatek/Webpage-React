@@ -8,6 +8,7 @@
   z-index: 1;
   height: 100vh;
   width: 100vw;
+  display: flex;
 }
 
 .galleryPictures {
@@ -24,4 +25,24 @@ h1 {
   font-size: 50px;
   text-align: center;
   padding: 50px;
+  position: relative;
+}
+
+.basket {
+  width: 50px;
+  height: 20px;
+  position: absolute;
+  top: 30px;
+  right: 230px;
+}
+
+.basketThings {
+  width: 600px;
+  height: 520px;
+  background-color: black;
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }

@@ -8,23 +8,19 @@ import scrollToComponent from "react-scroll-to-component";
 
 
 
+
 class MainPage extends React.Component {
 
 
 
 	render() {
 
-		const style10 = {
-			fontSize: '50px',
-			color: 'black',
-			padding: '100px',
-		};
+
 
 		return (
 			<div>
-
 				<div className='onepage'>
-					<div className='tobottom' style={style10} onClick={() => scrollToComponent(this.Finish, { offset: 0, align: 'top', duration: 13500, ease: 'linear'})}>Click me</div>
+					<button className='tobottom' onClick={() => scrollToComponent(this.Finish, { offset: 0, align: 'top', duration: 13500, ease: 'linear'})}>˅</button>
 				<SectionOne>
 
 				</SectionOne>

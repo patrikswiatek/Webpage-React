@@ -5,14 +5,21 @@
 /* BODY */
 .tobottom {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
+  top: 70vh;
+  left: 43vw;
+  font-size: 65px;
+  color: white;
+  padding: 100px;
+  display: flex;
 }
 
 .onepage {
-  background: url("./images/12.jpg") no-repeat;
+  background: url("./images/30.png") no-repeat;
   background-size: cover;
   background-position: center;
 }
+
 
 .section1 {
   height: 100vh;
@@ -31,28 +38,23 @@
 }
 
 .elo2 {
-  background-image: url("./images/16.jpeg");
+  background-image: url("./images/chair5.png");
   background-repeat: no-repeat;
   background-position: 57% 50%;
   background-size: cover;
 }
 
-.elo {
-  background-color: #4b4b4b;
-  opacity: 1;
-}
 
-elo3 {
-  background-image: url("./images/25.jpg");
+
+.elo3 {
+  background-image: url("./images/ba.jpg");
   background-repeat: no-repeat;
-
   background-size: cover;
 }
 
 .elo4 {
-  background-image: url("./images/26.jpg");
+  background-image: url("./images/ab.jpg");
   background-repeat: no-repeat;
-
   background-size: cover;
 }
 
@@ -68,12 +70,17 @@ elo3 {
 
 
 /* MENU */
-
+.menu {
+  padding-top: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 nav {
   float: right;
   filter: none;
-  padding: 40vh;
+  align-items: center;
 }
 
 ol {
@@ -84,12 +91,13 @@ ol {
   height: 35px;
   line-height: 40px;
   text-align: center;
+  align-items: center;
 }
 
 ol a {
   display: block;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 ol>li {
@@ -100,5 +108,5 @@ ol>li {
 
 
 ol>li:hover>a {
-  color: rgba(121, 55, 6, 0.82);
+  color: rgba(118, 54, 6, 0.82);
 }

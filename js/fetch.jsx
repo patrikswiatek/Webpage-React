@@ -1,13 +1,13 @@
 import React from "react";
-import './../partials/_gallery.scss'
-
+const reactFormContainer = document.querySelector('.react-form-container');
 
 class Fetch extends React.Component {
 	constructor(props) {
 		super(props);
+
 		this.state = {
-			database: [],
-		}
+			id: '', name: '', color: '', set: '', price: '',
+		};
 	}
 
 	clickDelete = event => {
@@ -21,60 +21,43 @@ class Fetch extends React.Component {
 
 	clickAdd = event => {
 		fetch('http://localhost:3000/products', {
-			method: 'POST', body: JSON.stringify(myData)
+			method: 'POST',
 		}).then(resp => resp.json())
 			.then(data => {
 				this.loadProducts();
 			});
+
+		if (formData.formSender.length < 1 || formData.formEmail.length < 1 || formData.formSubject.length < 1 || formData.formMessage.length < 1) {
+			return false
+		}
 	};
 
 	loadProducts = () => {
 		fetch('http://localhost:3000/products')
 			.then(r => r.json())
 			.then(data => {
-				this.setState({
-					database: data,
-				});
-				console.log(data);
+				let database = {
+					id: this.state.id,
+					name: this.state.name,
+					color: this.state.color,
+					set: this.state.set,
+					price: this.set.price,
+				};
 			});
 	};
 
-	render(){
+
+	render() {
 		return (
-			<div>
-				<ul>
-					{this.state.database.map((el) => <li key={el.id} id={el.id}> {el.src} {el.name} {el.price} </li>)}
-				</ul>
-			</div>
+			<div>dsfs</div>
 		);
+
 	}
 	componentDidMount(){
 		this.loadProducts()
 	}
 }
-/*
-class Prod extends React.Component {
-	render() {
-		return (
-			{
-				src: this.props.src,
-				thumbnail: this.props.price,
-				thumbnailWidth: 320,
-				thumbnailHeight: 174,
-				caption: this.props.name,
-			});
-	}
-}
-*/
+
 
 export default Fetch;
 
-/*
-const images = [{
-			src: "./../images/1.jpg",
-			thumbnail: "./../images/1.jpg",
-			thumbnailWidth: 320,
-			thumbnailHeight: 174,
-			caption: "After Rain (Jeshu John - designerspics.com)"
-		},
- */

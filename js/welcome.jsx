@@ -35,15 +35,14 @@ class Welcome extends React.Component {
 
 		return (
 			<div>
-				<span className="fancy-btn" onMouseEnter={ this.handleEnter } onMouseLeave={this.handleLeave} onClick={() => scrollToComponent(this.Finish, { offset: 0, align: 'top', duration: 1500})}>
-						You'll sit with the excitement</span>
+				<Link className="fancy-btn" onMouseEnter={ this.handleEnter } onMouseLeave={this.handleLeave} to='/Main' >
+					You'll sit with the excitement</Link>
 
 
 				<video style={style} id="background-video" loop autoPlay>
 					<source src={this.state.videoURL} type="video/mp4" />
 					Your browser does not support the video tag.
 				</video>
-				<header className="col-12 row menu" ref={(header) => { this.Finish = header; }} />
 			</div>
 		);
 	}

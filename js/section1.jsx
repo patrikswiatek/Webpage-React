@@ -12,10 +12,13 @@ class SectionOne extends React.Component {
 	render() {
 
 
-
 		return(
+
+
+
 			<section id='section1' className='section1'>
 				<Menu />
+
 			</section>
 		);
 	}

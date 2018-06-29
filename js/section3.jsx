@@ -111,8 +111,8 @@ class Section3 extends React.Component {
 			height: '550px',
 			width: '400px',
 			position: 'relative',
-			top: '15vh',
-			left: '66.89vw',
+			top: '16.789vh',
+			left: '61.89vw',
 			opacity: 1,
 		};
 

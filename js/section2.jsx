@@ -3,13 +3,7 @@ import Plx from 'react-plx';
 
 
 class Section2 extends React.Component {
-	constructor(props) {
-		super(props);
 
-		this.state = {
-			filter: 'none',
-		}
-	}
 
 
 
@@ -109,7 +103,8 @@ class Section2 extends React.Component {
 			position: 'relative',
 			top: '5vh',
 			left: '-8vw',
-			filter: this.state.filter,
+			backgroundColor: 'grey',
+			opacity: .3,
 		};
 
 		const style2 = {
@@ -118,16 +113,12 @@ class Section2 extends React.Component {
 			position: 'relative',
 			top: '-57vh',
 			left: '72vw',
-			backgroundColor: 'green',
-			filter: this.state.filter,
 		};
 
-		const style3 = {
-			filter: this.state.filter,
-		};
+
 
 		return(
-			<section className='section2' style={style3}>
+			<section className='section2'>
 				<Plx parallaxData={parallax}>
 					<div className="elo" style={style} />
 				</Plx>

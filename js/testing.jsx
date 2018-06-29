@@ -1,164 +1,96 @@
-import React from 'react';
-import Plx from 'react-plx';
-import Menu from './nav.jsx';
-import Contact from './contact.jsx';
+import React from "react";
+
 
 class Testing extends React.Component {
+	constructor(props) {
+		super(props);
 
-	render () {
-
-
-
-		const parallax = [
-			{
-				start: 0,
-				end: 700,
-				properties: [
-					{
-						startValue: 0,
-						endValue: 100,
-						property: "translateX"
-					},
-					{
-						startValue: 0,
-						endValue: 1,
-						property: "opacity"
-					}]
-			},
-{
-				start: 790,
-				end: 1000,
-				properties: [
-					{
-						startValue: 0,
-						endValue: -90,
-						property: "rotate"
-					},
-					{
-						startValue: 1,
-						endValue: 0,
-						property: "opacity"
-					}
-
-				]
-			},
-
-				];
-
-const parallax2 = [
-	{
-		start: 0,
-		end: 700,
-		properties: [
-			{
-				startValue: 0,
-				endValue: -150,
-				property: "translateX"
-			},
-			{
-				startValue: 0,
-				endValue: 1,
-				property: "opacity"
-			}]
-	},
-	{
-		start: 790,
-		end: 1000,
-		properties: [
-			{
-				startValue: 0,
-				endValue: 90,
-				property: "rotate"
-			},
-			{
-				startValue: 1,
-				endValue: 0,
-				property: "opacity"
-			}
-
-		]
-	},
-
-];
-const parallax3 = [
-	{
-		start: 0,
-		end: 700,
-		properties: [
-			{
-				startValue: 0,
-				endValue: -150,
-				property: "translateX"
-			},
-			{
-				startValue: 0,
-				endValue: 1,
-				property: "opacity"
-			}]
-	},
-	{
-		start: 790,
-		end: 1000,
-		properties: [
-			{
-				startValue: 0,
-				endValue: 90,
-				property: "rotate"
-			},
-			{
-				startValue: 1,
-				endValue: 0,
-				property: "opacity"
-			}
-
-		]
-	},
-
-];
-
-
-
-		const style = {
-			height: '550px',
-			width: '400px',
-			position: 'absolute',
-			top: '15vh',
-			right: '45vw',
-		};
-
-const style2 = {
-			height: '550px',
-			width: '400px',
-			position: 'absolute',
-			top: '20vh',
-			right: '40vw',
+		this.state = {
+			id: '', name: '', color: '', set: '', price: '',
 		};
 
 
+	}
+
+	handleChange = (e) => {
+		let newState = {};
+
+		newState[e.target.id] = e.target.value;
+
+		this.setState(newState)
+	};
+
+	clickDelete = event => {
+		fetch(`http://localhost:3000/products/${event.target.parentElement.getAttribute('id')}`, {
+			method: 'DELETE',
+		}).then(resp => resp.json())
+			.then(data => {
+				this.loadProducts();
+			});
+	};
+
+	clickAdd = event => {
+		event.preventDefault();
+
+
+		fetch('http://localhost:3000/products', {
+			method: 'POST',
+		}).then(resp => resp.json())
+			.then(data => {
+				this.loadProducts();
+			});
+	};
+
+	loadProducts = () => {
+		fetch('http://localhost:3000/products')
+			.then(r => r.json())
+			.then(data => {
+				let database = data;
+					this.setState ({
+						id: database.id,
+						name: database.name,
+						color: database.color,
+						set: database.set,
+						price: database.price,
+				});
+			});
+	};
+
+
+	render() {
 		return (
-			<div className='nowszystko'>
-				<section className="sectiona1">
 
-					<Menu />
-					<Footer />
-				</section>
-				<section className="sectiona2">
-
-						<Plx parallaxData={parallax}>
-							<div className="elo" style={style} />
-						</Plx>
-					<Plx parallaxData={parallax2}>
-							<div className="elo2" style={style2} />
-						</Plx>
+			<form onSubmit={this.clickAdd}>
 
 
-				</section>
-				<section className="sectiona3">
 
-				</section>
-			</div>
-		)
+					<input name='name' type='text' onChange={this.handleChange} value={this.state.id} />
+
+
+
+					<input name='email' type='email' onChange={this.handleChange} value={this.state.name} />
+
+
+
+					<input name='subject' type='text' onChange={this.handleChange} value={this.state.color} />
+
+
+
+					<input name='subject' type='text' onChange={this.handleChange} value={this.state.set} />
+
+
+
+					<input name='subject' type='text' onChange={this.handleChange} value={this.state.price} />
+				<input className='btn' type='submit' placeholder='Send message' />
+
+			</form>
+		);
+
+	}
+	componentDidMount(){
+		this.loadProducts()
 	}
 }
 
 export default Testing;
+
