@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf290f0a-a4ed-4609-b54a-64438e9f8fa3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/images/16.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/js/app.jsx" afterPath="$PROJECT_DIR$/js/app.jsx" />
-      <change beforePath="$PROJECT_DIR$/js/contact.jsx" afterPath="$PROJECT_DIR$/js/contact.jsx" />
-      <change beforePath="$PROJECT_DIR$/js/footer.jsx" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/js/main.jsx" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/js/mainPage.jsx" afterPath="$PROJECT_DIR$/js/mainPage.jsx" />
-      <change beforePath="$PROJECT_DIR$/js/testing.jsx" afterPath="$PROJECT_DIR$/js/testing.jsx" />
-      <change beforePath="$PROJECT_DIR$/js/welcome.jsx" afterPath="$PROJECT_DIR$/js/welcome.jsx" />
-      <change beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
-      <change beforePath="$PROJECT_DIR$/main.css.map" afterPath="$PROJECT_DIR$/main.css.map" />
-      <change beforePath="$PROJECT_DIR$/main.scss" afterPath="$PROJECT_DIR$/main.scss" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="$PROJECT_DIR$/partials/_contact.scss" afterPath="$PROJECT_DIR$/partials/_contact.scss" />
-      <change beforePath="$PROJECT_DIR$/partials/_mainPage.scss" afterPath="$PROJECT_DIR$/partials/_mainPage.scss" />
-      <change beforePath="$PROJECT_DIR$/partials/_testing.scss" afterPath="$PROJECT_DIR$/partials/_testing.scss" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="$PROJECT_DIR$/webpack.config.js" />
+      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_mainPage.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_mainPage.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/partials/_mainPage.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="435">
@@ -110,7 +94,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="section2.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="section2.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/section2.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -151,7 +135,6 @@
         <option value="$PROJECT_DIR$/a.gitignore" />
         <option value="$USER_HOME$/WRO_FER_S_12_REACT_React_Workshop/1_Fetch/js/zadanie01.jsx" />
         <option value="$USER_HOME$/Downloads/react-drive-in-1.5.0/src/react-drive-in.jsx" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/galleryMain.jsx" />
         <option value="$PROJECT_DIR$/db" />
         <option value="$PROJECT_DIR$/db.json" />
@@ -183,6 +166,7 @@
         <option value="$PROJECT_DIR$/js/mainPage.jsx" />
         <option value="$PROJECT_DIR$/js/section2.jsx" />
         <option value="$PROJECT_DIR$/partials/_mainPage.scss" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -416,12 +400,12 @@
       <workItem from="1530028072856" duration="8651000" />
       <workItem from="1530074540642" duration="17527000" />
       <workItem from="1530209322521" duration="19031000" />
-      <workItem from="1530237206360" duration="5611000" />
+      <workItem from="1530237206360" duration="5722000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135988000" />
+    <option name="totallyTimeSpent" value="136099000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -480,13 +464,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Programming/WRO_FER_S_12_REACT_React/1_Zadania/Dzien_3/2_State_podsumowanie/js/zadanie01.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-631">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Programming/WRO_FER_S_12_REACT_React/1_Zadania/Dzien_3/2_State_podsumowanie/js/zadanie00.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -839,6 +816,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/partials/_mainPage.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="41" column="13" lean-forward="false" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/section2.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -846,14 +839,6 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/_mainPage.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="41" column="13" lean-forward="false" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
