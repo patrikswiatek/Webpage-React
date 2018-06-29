@@ -85,4 +85,4 @@ plugins: [
 		template: './index.html'
 	})
 ]
-}
+};

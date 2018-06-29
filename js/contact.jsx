@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from "react-router-dom/es/Link";
 
+
 const reactFormContainer = document.querySelector('.react-form-container');
 
 class ReactFormLabel extends React.Component {
@@ -89,7 +90,7 @@ class ReactForm extends React.Component {
 			<div className="contact">
 				<div className="flexwrap">
 					<div className="arrowed">
-						<Link to='/'><div className="arrow-1" /></Link>
+						<div className="arrow-1" />
 					</div>
 				</div>
 

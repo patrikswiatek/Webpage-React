@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Philosopher:400,400i");
-@import url("https://fonts.googleapis.com/css?family=Philosopher:400,400i");
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+@import url("https://fonts.googleapis.com/css?family=Wallpoet");
 * {
   margin: 0;
   padding: 0;
@@ -79,39 +80,61 @@ body {
       width: 100%; } }
 
 /* BODY */
-.section1 {
-  background: url("./images/16.jpg") no-repeat;
+.tobottom {
+  position: absolute;
+  z-index: 2; }
+
+.onepage {
+  background: url("./images/12.jpg") no-repeat;
   background-size: cover;
+  background-position: center; }
+
+.section1 {
   height: 100vh;
   width: 99vw;
-  position: absolute;
-  z-index: 1;
-  font-family: 'Philosopher', sans-serif; }
+  position: relative;
+  font-family: 'Philosopher', cursive; }
 
 .section1:active {
   filter: blur(1.5px); }
 
 .section2 {
   height: 100vh;
-  width: 100vw;
-  background: url("./images/3.jpg") no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1; }
+  width: 100vw; }
+
+.elo2 {
+  background-image: url("./images/16.jpeg");
+  background-repeat: no-repeat;
+  background-position: 57% 50%;
+  background-size: cover; }
+
+.elo {
+  background-color: #4b4b4b;
+  opacity: 1; }
+
+elo3 {
+  background-image: url("./images/25.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.elo4 {
+  background-image: url("./images/26.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 .section3 {
   height: 100vh;
-  width: 100vw;
-  background: url("./images/4.jpg") no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1; }
+  width: 100vw; }
+
+.section4 {
+  height: 100vh;
+  width: 100vw; }
 
 /* MENU */
 nav {
   float: right;
   filter: none;
-  padding-top: 45px; }
+  padding: 40vh; }
 
 ol {
   list-style-type: none;
@@ -125,7 +148,7 @@ ol {
 ol a {
   display: block;
   text-decoration: none;
-  color: whitesmoke; }
+  color: black; }
 
 ol > li {
   float: left;
@@ -133,22 +156,6 @@ ol > li {
   height: 28px; }
 
 ol > li:hover > a {
-  color: rgba(121, 55, 6, 0.82); }
-
-/* FOOTER */
-.footer {
-  position: absolute;
-  bottom: 60px;
-  right: 130px; }
-
-.text {
-  float: right;
-  color: whitesmoke;
-  font-size: 19px;
-  font-style: italic;
-  text-decoration: none; }
-
-.text:hover {
   color: rgba(121, 55, 6, 0.82); }
 
 .gallery {
@@ -239,39 +246,8 @@ h1 {
   color: #fff;
   opacity: 1; }
 
-.arrowed {
-  position: absolute;
-  height: 200px;
-  width: 200px;
-  margin: 0 20px 20px 0; }
-
-.arrow-1 {
-  height: 35px;
-  width: 35px;
-  border: 1px solid #f5a061;
-  border-width: 4px 4px 0 0;
-  transform: rotate(225deg);
-  position: absolute;
-  left: 2.4vw;
-  top: 2vw;
-  z-index: 3; }
-
-.flexwrap {
-  border: 3px solid #f5a061;
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-  position: absolute;
-  left: 25vw;
-  top: 3vh;
-  z-index: 2;
-  background-color: #663006;
-  opacity: 1; }
-
 .contact {
   font: 100% 'Roboto', arial, sans-serif;
-  background: url("./images/17.jpg") no-repeat;
-  background-size: cover;
   color: #f5a061;
   text-decoration: none;
   width: 100vw;
@@ -358,77 +334,78 @@ textarea {
   .btn:focus {
     outline: 0; }
 
-/* BODY */
-.section1 {
-  background: url("./images/16.jpg") no-repeat;
-  background-size: cover;
-  height: 100vh;
-  width: 99vw;
-  position: absolute;
-  z-index: 1;
-  font-family: 'Philosopher', sans-serif; }
-
-.section1:active {
-  filter: blur(1.5px); }
-
-.section2 {
+.sectiona1 {
   height: 100vh;
   width: 100vw;
-  background: url("./images/3.jpg") no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1; }
+  display: flex;
+  font-size: 40px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.75); }
 
-.section3 {
+.sectiona2 {
+  height: 100vh;
+  width: 100vw; }
+
+.sectiona3 {
   height: 100vh;
   width: 100vw;
-  background: url("./images/4.jpg") no-repeat;
-  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.elo {
+  background: beige;
+  opacity: 0.5; }
+
+.nowszystko {
+  background-image: url("./images/29.jpg");
+  background-size: cover; }
+
+.shop {
   position: absolute;
-  z-index: 1; }
-
-/* MENU */
-nav {
-  float: right;
-  filter: none;
-  padding-top: 45px; }
-
-ol {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  font-size: 16px;
-  height: 35px;
-  line-height: 40px;
-  text-align: center; }
-
-ol a {
-  display: block;
-  text-decoration: none;
+  top: 200px;
+  right: 670px;
   color: whitesmoke; }
 
-ol > li {
-  float: left;
-  width: 133px;
-  height: 28px; }
+.section4 {
+  color: #000000;
+  display: flex; }
 
-ol > li:hover > a {
-  color: rgba(121, 55, 6, 0.82); }
+.Words {
+  margin: 0 auto;
+  padding: 140px 30px;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-size: 85px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  text-transform: uppercase; }
 
-/* FOOTER */
-.footer {
-  position: absolute;
-  bottom: 60px;
-  right: 130px; }
+/*
+** Apply common styles to each line of text
+*/
+.Words-line {
+  height: 80px;
+  overflow: hidden;
+  position: relative; }
+  .Words-line:nth-child(odd) {
+    transform: skew(60deg, -30deg) scaleY(0.66667); }
+  .Words-line:nth-child(even) {
+    transform: skew(0deg, -30deg) scaleY(1.33333); }
+  .Words-line:nth-child(1) {
+    left: 29px; }
+  .Words-line:nth-child(2) {
+    left: 58px; }
+  .Words-line:nth-child(3) {
+    left: 87px; }
+  .Words-line:nth-child(4) {
+    left: 116px; }
 
-.text {
-  float: right;
-  color: whitesmoke;
-  font-size: 19px;
-  font-style: italic;
-  text-decoration: none; }
-
-.text:hover {
-  color: rgba(121, 55, 6, 0.82); }
+p {
+  height: 80px;
+  line-height: 60px;
+  padding: 0 10px;
+  transition: all .4s ease-in-out;
+  vertical-align: top;
+  white-space: nowrap; }
 
 /*# sourceMappingURL=main.css.map */

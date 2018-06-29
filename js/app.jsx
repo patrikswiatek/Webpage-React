@@ -1,27 +1,40 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './../main.scss';
-import Main from './main.jsx'
+import MainPage from './mainPage.jsx'
 import GalleryMain from './galleryMain.jsx'
 import {HashRouter} from "react-router-dom";
 import Route from "react-router-dom/es/Route";
-import ReactForm from './contact.jsx'
+import Welcome from './welcome.jsx'
+import Contact from './contact.jsx'
 import Testing from './testing.jsx'
+import Switch from "react-router-dom/es/Switch";
 
 
 
 document.addEventListener('DOMContentLoaded', function () {
 
+
+
+	class NotFound extends React.Component {
+		render() {
+			return <h1>404,Nothing is here</h1>;
+		}
+	}
+
 	class App extends React.Component {
 			render() {
-				return (<HashRouter>
-					<div>
-						<Route exact path='/' component={Main}/>
-						<Route path='/Shop' component={GalleryMain}/>
-						<Route path='/Contact' component={ReactForm}/>
-						<Route path='/Testing' component={Testing}/>
-					</div>
-				</HashRouter>)
+				return (
+					<HashRouter>
+						<Switch>
+							<Route exact path='/' component={Welcome}/>
+							<Route path='/Main' component={MainPage}/>
+							<Route path='/Shop' component={GalleryMain}/>
+							<Route path='/Contact' component={Contact}/>
+							<Route path='/Testing' component={Testing}/>
+							<Route component={NotFound} />
+						</Switch>
+					</HashRouter>)
 			}
 		}
 

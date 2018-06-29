@@ -1,15 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Philosopher:400,400i');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
 
 /* BODY */
+.tobottom {
+  position: absolute;
+  z-index: 2;
+}
+
+.onepage {
+  background: url("./images/12.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 .section1 {
-  background: url("./images/16.jpg") no-repeat;
-  background-size: cover;
   height: 100vh;
   width: 99vw;
-  position: absolute;
-  z-index: 1;
-  font-family: 'Philosopher', sans-serif;
+  position: relative;
+  font-family: 'Philosopher', cursive;
 }
 
 .section1:active {
@@ -19,27 +28,52 @@
 .section2 {
   height: 100vh;
   width: 100vw;
-  background: url("./images/3.jpg") no-repeat;
+}
+
+.elo2 {
+  background-image: url("./images/16.jpeg");
+  background-repeat: no-repeat;
+  background-position: 57% 50%;
   background-size: cover;
-  position: absolute;
-  z-index: 1;
+}
+
+.elo {
+  background-color: #4b4b4b;
+  opacity: 1;
+}
+
+elo3 {
+  background-image: url("./images/25.jpg");
+  background-repeat: no-repeat;
+
+  background-size: cover;
+}
+
+.elo4 {
+  background-image: url("./images/26.jpg");
+  background-repeat: no-repeat;
+
+  background-size: cover;
 }
 
 .section3 {
   height: 100vh;
   width: 100vw;
-  background: url("./images/4.jpg") no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
 }
 
+.section4 {
+  height: 100vh;
+  width: 100vw;
+}
+
+
 /* MENU */
+
 
 nav {
   float: right;
   filter: none;
-  padding-top: 45px;
+  padding: 40vh;
 }
 
 ol {
@@ -55,7 +89,7 @@ ol {
 ol a {
   display: block;
   text-decoration: none;
-  color: whitesmoke;
+  color: black;
 }
 
 ol>li {
@@ -66,25 +100,5 @@ ol>li {
 
 
 ol>li:hover>a {
-  color: rgba(121, 55, 6, 0.82);
-}
-
-/* FOOTER */
-
-.footer {
-  position: absolute;
-  bottom: 60px;
-  right: 130px;
-}
-
-.text {
-  float: right;
-  color: whitesmoke;
-  font-size: 19px;
-  font-style: italic;
-  text-decoration: none;
-}
-
-.text:hover {
   color: rgba(121, 55, 6, 0.82);
 }

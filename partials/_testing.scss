@@ -1,31 +1,24 @@
-@import url('https://fonts.googleapis.com/css?family=Philosopher:400,400i');
+@import url('https://fonts.googleapis.com/css?family=Wallpoet');
 
 
 .sectiona1 {
-  background: url("./images/16.jpg") no-repeat;
-  background-size: cover;
+
   height: 100vh;
   width: 100vw;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 40px;
   text-align: center;
   color: rgba(255, 255, 255, .75);
 }
 
 .sectiona2 {
-  background: url("./images/3.jpg") no-repeat;
-  background-size: cover;
+
   height: 100vh;
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .sectiona3 {
-  background: url("./images/6.jpg") no-repeat;
-  background-size: cover;
+
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -33,30 +26,20 @@
   align-items: center;
 }
 
-.line-1{
-  top: 50%;
-  width: 24em;
-  margin: 0 auto;
-  border-right: 2px solid rgba(255,255,255,.75);
-  font-size: 180%;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  transform: translateY(-50%);
-  font-family: 'Philosopher', sans-serif;
+.elo {
+  background: beige;
+  opacity: 0.5;
 }
 
-/* Animation */
-.anim-typewriter{
-  animation: typewriter 4s steps(44) 1s 1 normal both,
-  blinkTextCursor 500ms steps(44) infinite normal;
-}
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 24em;}
-}
-@keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
+.nowszystko {
+  background-image: url("./images/29.jpg");
+
+  background-size: cover;
 }
 
+.shop {
+  position: absolute;
+  top: 200px;
+  right: 670px;
+  color: whitesmoke;
+}

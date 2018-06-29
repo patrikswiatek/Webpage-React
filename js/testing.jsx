@@ -1,10 +1,9 @@
 import React from 'react';
 import Plx from 'react-plx';
+import Menu from './nav.jsx';
+import Contact from './contact.jsx';
 
 class Testing extends React.Component {
-
-
-
 
 	render () {
 
@@ -12,52 +11,149 @@ class Testing extends React.Component {
 
 		const parallax = [
 			{
-				start: 300,
+				start: 0,
 				end: 700,
 				properties: [
 					{
 						startValue: 0,
-						endValue: 90,
+						endValue: 100,
+						property: "translateX"
+					},
+					{
+						startValue: 0,
+						endValue: 1,
+						property: "opacity"
+					}]
+			},
+{
+				start: 790,
+				end: 1000,
+				properties: [
+					{
+						startValue: 0,
+						endValue: -90,
 						property: "rotate"
 					},
 					{
 						startValue: 1,
-						endValue: 1.5,
-						property: "scale"
-					},
-					{
-						startValue: 1,
-						endValue: 0.75,
+						endValue: 0,
 						property: "opacity"
-					},
+					}
+
 				]
-			}
+			},
+
 				];
 
+const parallax2 = [
+	{
+		start: 0,
+		end: 700,
+		properties: [
+			{
+				startValue: 0,
+				endValue: -150,
+				property: "translateX"
+			},
+			{
+				startValue: 0,
+				endValue: 1,
+				property: "opacity"
+			}]
+	},
+	{
+		start: 790,
+		end: 1000,
+		properties: [
+			{
+				startValue: 0,
+				endValue: 90,
+				property: "rotate"
+			},
+			{
+				startValue: 1,
+				endValue: 0,
+				property: "opacity"
+			}
+
+		]
+	},
+
+];
+const parallax3 = [
+	{
+		start: 0,
+		end: 700,
+		properties: [
+			{
+				startValue: 0,
+				endValue: -150,
+				property: "translateX"
+			},
+			{
+				startValue: 0,
+				endValue: 1,
+				property: "opacity"
+			}]
+	},
+	{
+		start: 790,
+		end: 1000,
+		properties: [
+			{
+				startValue: 0,
+				endValue: 90,
+				property: "rotate"
+			},
+			{
+				startValue: 1,
+				endValue: 0,
+				property: "opacity"
+			}
+
+		]
+	},
+
+];
 
 
-		const style2 = {
-			height: '100px',
-			width: '100px',
-			backgroundColor: 'red',
+
+		const style = {
+			height: '550px',
+			width: '400px',
+			position: 'absolute',
+			top: '15vh',
+			right: '45vw',
 		};
 
+const style2 = {
+			height: '550px',
+			width: '400px',
+			position: 'absolute',
+			top: '20vh',
+			right: '40vw',
+		};
+
+
 		return (
-			<div>
+			<div className='nowszystko'>
 				<section className="sectiona1">
 
-					<p className="line-1 anim-typewriter">Animation typewriter style using css steps()</p>
-
+					<Menu />
+					<Footer />
 				</section>
 				<section className="sectiona2">
 
 						<Plx parallaxData={parallax}>
-							<div style={style2} />
+							<div className="elo" style={style} />
 						</Plx>
+					<Plx parallaxData={parallax2}>
+							<div className="elo2" style={style2} />
+						</Plx>
+
 
 				</section>
 				<section className="sectiona3">
-
 
 				</section>
 			</div>
