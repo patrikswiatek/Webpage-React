@@ -19,8 +19,8 @@ class MainPage extends React.Component {
 
 		return (
 			<div>
-				<div className='onepage'>
-					<button className='tobottom' onClick={() => scrollToComponent(this.Finish, { offset: 0, align: 'top', duration: 13500, ease: 'linear'})}>˅</button>
+				<div className='onePage'>
+					<a className='toBottom' onClick={() => scrollToComponent(this.Finish, { offset: 0, align: 'top', duration: 13500, ease: 'linear'})}>˅</a>
 				<SectionOne>
 
 				</SectionOne>

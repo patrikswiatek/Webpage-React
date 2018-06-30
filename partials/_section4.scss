@@ -10,8 +10,14 @@ $line-height: $clip-height - 20px;
 
 
 .section4 {
-  color: #7b301e;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formLink {
+  text-decoration: none;
+  color: rgba(238, 11, 0, 0.46);
 }
 
 .Words {

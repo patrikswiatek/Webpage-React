@@ -79,7 +79,7 @@ body {
       width: 100%; } }
 
 /* BODY */
-.tobottom {
+.toBottom {
   position: absolute;
   z-index: 3;
   top: 70vh;
@@ -89,9 +89,9 @@ body {
   padding: 100px;
   display: flex; }
 
-.onepage {
-  background: url("./images/30.png") no-repeat;
-  background-size: cover;
+.onePage {
+  background: url("./images/30.png");
+  background-size: auto;
   background-position: center; }
 
 .section1 {
@@ -114,14 +114,14 @@ body {
   background-size: cover; }
 
 .elo3 {
-  background-image: url("./images/ba.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-.elo4 {
   background-image: url("./images/ab.jpg");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: contain; }
+
+.elo4 {
+  background-image: url("./images/ba.jpg");
+  background-repeat: no-repeat;
+  background-size: contain; }
 
 .section3 {
   height: 100vh;
@@ -449,9 +449,60 @@ textarea {
   .btn:focus {
     outline: 0; }
 
+.section12, .section13 {
+  background-image: url("./images/30.png");
+  background-size: cover;
+  color: white;
+  font-size: 40px;
+  height: 3000px; }
+
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective-origin-x: 100%; }
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin-x: 100%; }
+
+.parallax__layer--base {
+  transform: translateZ(0); }
+
+.parallax__layer--back {
+  transform: translateZ(-1px); }
+
+.parallax__layer--back {
+  transform: translateZ(-15px) scale(2); }
+
+.parallax__layer--deep {
+  transform: translateZ(-29px) scale(3); }
+
+.parallax__group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d; }
+
+.parallax__group {
+  transform: translate3d(700px, 0, -800px) rotateY(30deg); }
+
+.elo {
+  width: 300px;
+  height: 300px; }
+
 .section4 {
-  color: #7b301e;
-  display: flex; }
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.formLink {
+  text-decoration: none;
+  color: rgba(238, 11, 0, 0.46); }
 
 .Words {
   margin: 0 auto;

@@ -103,16 +103,16 @@ class Section3 extends React.Component {
 			height: '550px',
 			width: '400px',
 			position: 'relative',
-			top: '3vh',
-			left: '59vw',
+			top: '12vh',
+			left: '54vw',
 		};
 
 		const style4 = {
 			height: '550px',
 			width: '400px',
 			position: 'relative',
-			top: '16.789vh',
-			left: '61.89vw',
+			top: '22.41vh',
+			left: '75.57vw',
 			opacity: 1,
 		};
 

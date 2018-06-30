@@ -3,7 +3,7 @@
 
 
 /* BODY */
-.tobottom {
+.toBottom {
   position: absolute;
   z-index: 3;
   top: 70vh;
@@ -14,9 +14,9 @@
   display: flex;
 }
 
-.onepage {
-  background: url("./images/30.png") no-repeat;
-  background-size: cover;
+.onePage {
+  background: url("./images/30.png");
+  background-size: auto;
   background-position: center;
 }
 
@@ -47,15 +47,15 @@
 
 
 .elo3 {
-  background-image: url("./images/ba.jpg");
+  background-image: url("./images/ab.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .elo4 {
-  background-image: url("./images/ab.jpg");
+  background-image: url("./images/ba.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .section3 {

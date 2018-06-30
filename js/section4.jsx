@@ -1,5 +1,6 @@
 import React from 'react';
 import Plx from 'react-plx';
+import Link from "react-router-dom/es/Link";
 
 
 
@@ -70,28 +71,28 @@ class Section4 extends React.Component {
 
 		return(
 			<section className='section4'>
-				<ul className="Words">
-					<li className="Words-line">
-						<p>&nbsp;</p>
-					</li>
-					<li className="Words-line">
-						<Plx parallaxData={parallax7}>
-						<p>Let's talk </p>
-						</Plx>
-					</li>
-					<li className="Words-line">
-						<Plx parallaxData={parallax8}>
-						<p>about your</p>
-						</Plx>
-					</li>
-					<li className="Words-line">
-						<Plx parallaxData={parallax9}>
-						<p>comfort</p>
-						</Plx>
-					</li>
-
-
-				</ul>
+				<Link className='formLink' to='/Contact'>
+					<ul className="Words">
+						<li className="Words-line">
+							<p>&nbsp;</p>
+						</li>
+						<li className="Words-line">
+							<Plx parallaxData={parallax7}>
+							<p>Let's talk </p>
+							</Plx>
+						</li>
+						<li className="Words-line">
+							<Plx parallaxData={parallax8}>
+							<p>about your</p>
+							</Plx>
+						</li>
+						<li className="Words-line">
+							<Plx parallaxData={parallax9}>
+							<p>comfort</p>
+							</Plx>
+						</li>
+					</ul>
+				</Link>
 			</section>
 		);
 	}

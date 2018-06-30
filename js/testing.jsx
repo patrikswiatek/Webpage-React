@@ -1,96 +1,58 @@
-import React from "react";
+import React from 'react';
+
 
 
 class Testing extends React.Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			id: '', name: '', color: '', set: '', price: '',
-		};
 
 
-	}
-
-	handleChange = (e) => {
-		let newState = {};
-
-		newState[e.target.id] = e.target.value;
-
-		this.setState(newState)
-	};
-
-	clickDelete = event => {
-		fetch(`http://localhost:3000/products/${event.target.parentElement.getAttribute('id')}`, {
-			method: 'DELETE',
-		}).then(resp => resp.json())
-			.then(data => {
-				this.loadProducts();
-			});
-	};
-
-	clickAdd = event => {
-		event.preventDefault();
-
-
-		fetch('http://localhost:3000/products', {
-			method: 'POST',
-		}).then(resp => resp.json())
-			.then(data => {
-				this.loadProducts();
-			});
-	};
-
-	loadProducts = () => {
-		fetch('http://localhost:3000/products')
-			.then(r => r.json())
-			.then(data => {
-				let database = data;
-					this.setState ({
-						id: database.id,
-						name: database.name,
-						color: database.color,
-						set: database.set,
-						price: database.price,
-				});
-			});
-	};
 
 
 	render() {
-		return (
-
-			<form onSubmit={this.clickAdd}>
 
 
 
-					<input name='name' type='text' onChange={this.handleChange} value={this.state.id} />
+
+
+		const style11 = {
+			height: '100px',
+			width: '100px',
+			position: 'absolute',
+			top: '50vh',
+			left: '30vw',
+			backgroundColor: 'blue',
+		};
+
+		const style12 = {
+			height: '100px',
+			width: '100px',
+			position: 'absolute',
+			top: '50vh',
+			left: '72vw',
+			backgroundColor: 'yellow',
+		};
 
 
 
-					<input name='email' type='email' onChange={this.handleChange} value={this.state.name} />
+
+		return(
+			<div  className='section12'>
 
 
+				<div className="parallax">
+					<div className="parallax__layer parallax__layer--back">
+						<span className='elo' style={{background: 'red', position: 'absolute', top: '1000px', left: '100px'}} />
+					</div>
+					<div className="parallax__layer parallax__layer--base">
+						<span className='elo' style={{background: 'green', position: 'absolute', top: '1000px', left: '300px'}} />
+					</div>
+				</div>
 
-					<input name='subject' type='text' onChange={this.handleChange} value={this.state.color} />
 
-
-
-					<input name='subject' type='text' onChange={this.handleChange} value={this.state.set} />
-
-
-
-					<input name='subject' type='text' onChange={this.handleChange} value={this.state.price} />
-				<input className='btn' type='submit' placeholder='Send message' />
-
-			</form>
+			</div>
 		);
-
-	}
-	componentDidMount(){
-		this.loadProducts()
 	}
 }
 
 export default Testing;
+
 
