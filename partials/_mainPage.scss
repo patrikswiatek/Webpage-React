@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 
 
+
 /* BODY */
 .toBottom {
   position: absolute;
@@ -12,10 +13,210 @@
   color: white;
   padding: 100px;
   display: flex;
+  animation: slide-in-fwd-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
 }
+
+.toBottom2 {
+  position: absolute;
+  z-index: 3;
+  top: 67vh;
+  left: 42.82vw;
+  font-size: 80px;
+  color: white;
+  padding: 100px;
+  display: flex;
+  animation: slide-in-fwd-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
+}
+
+
+@keyframes slide-in-fwd-center {
+  0% {
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+
+/* EHH */
 
 .onePage {
   background: url("./images/30.png");
+  background-size: auto;
+  background-position: center;
+  position: fixed;
+  width: 10vw;
+  height: 100vh;
+  left: 0;
+}
+
+.onePageb {
+  background: url("./images/30.png");
+  background-size: auto;
+  background-position: center;
+  position: fixed;
+  width: 12vw;
+  height: 100vh;
+  right: 0;
+}
+
+.onePage2 {
+  background: url("./images/30.png");
+  background-size: auto;
+  background-position: center;
+  position: fixed;
+  width: 62vw;
+  height: 100vh;
+  bottom: 0;
+  right: 18vw;
+}
+
+.onePage3 {
+  background: url("./images/30.png");
+  background-size: auto;
+  background-position: center;
+  position: fixed;
+  width: 10vw;
+  height: 10vh;
+  left: 10vw;
+  top: 0;
+}
+
+.onePage4 {
+  background: url("./images/30.png");
+  background-size: auto;
+  background-position: center;
+  position: fixed;
+  width: 10vw;
+  height: 18vh;
+  left: 3.5vw;
+  top: 4vh;
+  transform: rotate(125deg);
+}
+
+.onePage5 {
+  background: url("./images/30.png");
+  background-size: auto;
+  background-position: center;
+  position: fixed;
+  width: 10vw;
+  height: 18vh;
+  left: 16.5vw;
+  top: 4vh;
+  transform: rotate(55deg);
+}
+
+.onePage6 {
+  background: url("./images/30.png");
+  background-size: auto;
+  background-position: center;
+  position: fixed;
+  width: 10vw;
+  height: 18vh;
+  left: 3.5vw;
+  top: 28vh;
+  transform: rotate(55deg);
+}
+
+.onePage7 {
+  background: url("./images/30.png");
+  background-size: auto;
+  background-position: center;
+  position: fixed;
+  width: 10vw;
+  height: 18vh;
+  left: 16.5vw;
+  top: 28vh;
+  transform: rotate(125deg);
+}
+
+.onePage8 {
+  background: url("./images/30.png");
+  background-size: auto;
+  background-position: center;
+  position: fixed;
+  width: 10vw;
+  height: 61vh;
+  left: 10vw;
+  bottom: 0;
+}
+
+.onePage3b {
+  background: url("./images/30.png");
+  background-size: auto;
+  background-position: center;
+  position: fixed;
+  width: 10vw;
+  height: 10.7vh;
+  right: 10vw;
+  bottom: 0;
+}
+
+.onePage4b {
+  background: url("./images/30.png");
+  background-position: center;
+  position: fixed;
+  width: 10vw;
+  height: 18vh;
+  right: 5.5vw;
+  bottom: 4vh;
+  transform: rotate(125deg);
+}
+
+.onePage5b {
+  background: url("./images/30.png");
+  background-size: auto;
+  background-position: center;
+  position: fixed;
+  width: 10vw;
+  height: 18vh;
+  right: 14.5vw;
+  bottom: 4vh;
+  transform: rotate(55deg);
+}
+
+.onePage6b {
+  background: url("./images/30.png");
+  background-size: auto;
+  background-position: center;
+  position: fixed;
+  width: 10vw;
+  height: 18vh;
+  right: 5.5vw;
+  bottom: 28vh;
+  transform: rotate(55deg);
+}
+
+.onePage7b {
+  background: url("./images/30.png");
+  background-size: auto;
+  background-position: center;
+  position: fixed;
+  width: 10vw;
+  height: 18vh;
+  right: 14.3vw;
+  bottom: 28vh;
+  transform: rotate(125deg);
+}
+
+.onePage8b {
+  background: url("./images/30.png");
+  background-size: auto;
+  background-position: center;
+  position: fixed;
+  width: 10vw;
+  height: 61vh;
+  right: 10vw;
+  top: 0;
+}
+
+
+
+.back {
+  background-image: url("./images/32.png");
   background-size: auto;
   background-position: center;
 }
@@ -26,22 +227,42 @@
   width: 99vw;
   position: relative;
   font-family: 'Philosopher', cursive;
+
 }
 
 .section1:active {
   filter: blur(1.5px);
 }
 
+
+
 .section2 {
   height: 100vh;
   width: 100vw;
+  position: relative;
+}
+
+.elo {
+  height: 450px;
+  width: 300px;
+  position: absolute;
+  top: 20vh;
+  left: 39vw;
+  background-color: black;
+
 }
 
 .elo2 {
   background-image: url("./images/chair5.png");
   background-repeat: no-repeat;
-  background-position: 57% 50%;
+  background-position: 32% 50%;
   background-size: cover;
+  height: 450px;
+  width: 300px;
+  position: absolute;
+  top: 30vh;
+  right: 32vw;
+
 }
 
 
@@ -50,17 +271,28 @@
   background-image: url("./images/ab.jpg");
   background-repeat: no-repeat;
   background-size: contain;
+  position: absolute;
+  height: 550px;
+  width: 400px;
+  top: 40vh;
+  left: 28vw;
 }
 
 .elo4 {
   background-image: url("./images/ba.jpg");
   background-repeat: no-repeat;
   background-size: contain;
+  position: absolute;
+  height: 550px;
+  width: 400px;
+  top: 61.2vh;
+  right: 28.25vw;
 }
 
 .section3 {
   height: 100vh;
   width: 100vw;
+  position: relative;
 }
 
 .section4 {
@@ -71,10 +303,18 @@
 
 /* MENU */
 .menu {
-  padding-top: 20vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("./images/32.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 25vh;
+  right: 0;
+  width: 50vw;
+  height: 4vh;
 }
 
 nav {
@@ -87,7 +327,7 @@ ol {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  font-size: 16px;
+  font-size: 1.1rem;
   height: 35px;
   line-height: 40px;
   text-align: center;
@@ -97,13 +337,18 @@ ol {
 ol a {
   display: block;
   text-decoration: none;
-  color: white;
+  color: #4b403c;
+}
+
+ol li {
+
 }
 
 ol>li {
   float: left;
   width: 133px;
   height: 28px;
+  margin-right: 50px;
 }
 
 

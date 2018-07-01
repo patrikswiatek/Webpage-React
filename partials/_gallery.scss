@@ -39,10 +39,40 @@ h1 {
 .basketThings {
   width: 600px;
   height: 520px;
-  background-color: black;
+
   position: absolute;
   z-index: 5;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
 }
+
+.basket2 {
+  height: 60vh;
+  width: 40vw;
+  background: lightcoral;
+}
+
+.buyButton {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.buy {
+  height: 5vh;
+  width: 10vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

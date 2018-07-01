@@ -41,7 +41,7 @@ class Fetch extends React.Component {
 					name: this.state.name,
 					color: this.state.color,
 					set: this.state.set,
-					price: this.set.price,
+					price: this.state.price,
 				};
 			});
 	};

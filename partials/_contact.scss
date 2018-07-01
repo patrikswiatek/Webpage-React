@@ -26,7 +26,7 @@ $radius: 25px;
   height: 100vh;
 }
 
-form {
+.react-form {
   opacity: 0.9;
   padding: remy(32px);
   margin-right: auto;
@@ -68,7 +68,7 @@ label {
   touch-action: manipulation;
 }
 
-input,
+.form-input,
 textarea {
   display: block;
   padding: .5rem .75rem;

@@ -1,7 +1,7 @@
 import React from 'react';
-import './../partials/_gallery.scss'
 import Products from './gallery.jsx'
 import Fetch from "./fetch.jsx";
+import ShoppingCart from './basket.jsx'
 
 
 
@@ -31,8 +31,10 @@ class GalleryMain extends React.Component {
 		return (
 			<div className="gallery">
 				<div className="container">
-					<div className='basketThings' style={style} />
-					<h1>Galeria mega jest</h1>
+					<div style={style}>
+					<ShoppingCart />
+					</div>
+					<h1>Products</h1>
 					<button className='basket' onClick={this.handleClick}>Basket</button>
 
 					<Products />

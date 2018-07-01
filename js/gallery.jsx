@@ -4,36 +4,23 @@ import Gallery from 'react-grid-gallery'
 
 
 class Products extends React.Component {
-	constructor(props){
-		super(props);
 
-		this.state = {
-			on: false,
-		}
-	}
-
-	handleClick = () => {
-		this.setState({
-			on: !this.state.on,
-		})
-	};
 
 	render() {
 
 		const images = [{
-			src: "./../images/1.jpg",
-			thumbnail: "./../images/1.jpg",
-			thumbnailWidth: 320,
-			thumbnailHeight: 174,
-			caption: "After Rain (Jeshu John - designerspics.com)"
-		},
+				src: "./../images/1.jpg",
+				thumbnail: "./../images/1.jpg",
+				thumbnailWidth: 320,
+				thumbnailHeight: 212,
+			},
 			{
 				src: "./../images/2.jpg",
 				thumbnail: "./../images/2.jpg",
 				thumbnailWidth: 320,
 				thumbnailHeight: 212,
-				tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
-				caption: "Boats (Jeshu John - designerspics.com)"
+				tags: [{value: "Super to krzesło"}],
+				caption: `"Super to krzesło" jedynie 54.30 PLN`
 			},
 			{
 				src: "./../images/3.jpg",
@@ -91,15 +78,10 @@ class Products extends React.Component {
 			},
 		];
 
-		const style = {
-			display: this.state.on ? 'block' : 'none',
-		};
 
 
 		return (
-
 					<Gallery className ="galleryPictures" images={images}/>
-
 
 		);
 	}

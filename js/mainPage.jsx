@@ -18,13 +18,11 @@ class MainPage extends React.Component {
 
 
 		return (
-			<div>
-				<div className='onePage'>
-					<a className='toBottom' onClick={() => scrollToComponent(this.Finish, { offset: 0, align: 'top', duration: 13500, ease: 'linear'})}>˅</a>
-				<SectionOne>
+			<div className='back'>
 
-				</SectionOne>
-
+					<a className='toBottom' onClick={() => scrollToComponent(this.Finish, { offset: 0, align: 'top', duration: 10500, ease: 'linear'})}>˅</a>
+				<a className='toBottom2' onClick={() => scrollToComponent(this.Finish, { offset: 0, align: 'top', duration: 10500, ease: 'linear'})}>˅</a>
+				<SectionOne />
 
 				<Section2 />
 
@@ -32,8 +30,8 @@ class MainPage extends React.Component {
 
 				<Section4 ref={(section) => { this.Finish = section; }} />
 
-				</div>
 			</div>
+
 				);
 	}
 }
